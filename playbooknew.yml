@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Copy war onto tomcat server
+      copy:
+            src: /home/ec2-user/ansibledemo/dynamic_new-17.war
+
+            dest: /home/ec2-user/Shellscripting/apache-tomcat-9.0.37/webapps
+...
